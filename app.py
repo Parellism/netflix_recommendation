@@ -14,7 +14,8 @@ background-size: cover;
 img = Image.open('netflix-o.png')
 st.set_page_config(
     page_title='Recommendflix',
-    page_icon=img
+    page_icon=img,
+    layout="wide"
 )
 
 movies = pickle.load(open("movies_list.pkl",'rb'))
