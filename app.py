@@ -12,7 +12,14 @@ background-size: cover;
 """
 
 img = Image.open('netflix-o.png')
-st.set_page_config(page_title='Recommendflix',page_icon=img)
+st.set_page_config(
+    page_title='Recommendflix',
+    page_icon=img,
+    base="dark"
+    primaryColor="#e50914"
+    backgroundColor="#040000"
+    secondaryBackgroundColor="#2f0909"
+)
 
 movies = pickle.load(open("movies_list.pkl",'rb'))
 similarity = pickle.load(open("similarity.pkl",'rb'))
