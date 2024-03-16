@@ -3,7 +3,7 @@ import pickle
 
 page_bg_img = """
 <style>
-[data-testid-"stAppViewContainer"] {
+[data-testid="stAppViewContainer"] {
 background-image: url("https://www.dolby.com/siteassets/xf-site/blocks/hero/netflix-gradient.png");
 background-size: cover;
 }
