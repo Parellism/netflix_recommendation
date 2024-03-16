@@ -1,5 +1,6 @@
 import streamlit as st
 import pickle
+from PIL import Image
 
 page_bg_img = """
 <style>
@@ -9,6 +10,9 @@ background-size: cover;
 }
 </style>
 """
+
+img = Image.open('netflix-o.png')
+st.set_page_config(page_title='Recommendflix',page_icon=img)
 
 movies = pickle.load(open("movies_list.pkl",'rb'))
 similarity = pickle.load(open("similarity.pkl",'rb'))
