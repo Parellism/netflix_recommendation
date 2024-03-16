@@ -19,9 +19,7 @@ movies_list = movies['Title'].values
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-st.markdown("<h1 style='color:red;'>NETFLIX</h1>", unsafe_allow_html=True)
-st.header("Movies Recommender System")
-
+st.header("Netflix Movies Recommender System")
 select_movie = st.selectbox("Select movie", movies_list)
 
 def recommend(movie):
