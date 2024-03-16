@@ -3,8 +3,8 @@ import pickle
 
 page_bg_img = """
 <style>
-[data-testid-"stAppViewContainer'] {
-background-image: url(https://www.dolby.com/siteassets/xf-site/blocks/hero/netflix-gradient.png);
+[data-testid-"stAppViewContainer"] {
+background-image: url("https://www.dolby.com/siteassets/xf-site/blocks/hero/netflix-gradient.png");
 background-size: cover;
 }
 </style>
@@ -14,6 +14,7 @@ movies = pickle.load(open("movies_list.pkl",'rb'))
 similarity = pickle.load(open("similarity.pkl",'rb'))
 movies_list = movies['Title'].values
 
+st.markdown(page_bg_img, unsafe_allow_html=True)
 st.header("Netflix Movies Recommender System")
 select_movie = st.selectbox("Select movie", movies_list)
 
