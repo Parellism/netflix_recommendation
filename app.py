@@ -5,7 +5,7 @@ movies = pickle.load(open("movies_list.pkl",'rb'))
 similarity = pickle.load(open("similarity.pkl",'rb'))
 movies_list = movies['Title'].values
 
-st.header("Netflixx Movies Recommender System")
+st.header("Netflix Movies Recommender System")
 select_movie = st.selectbox("Select movie", movies_list)
 
 def recommend(movie):
