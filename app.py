@@ -12,6 +12,12 @@ background-size: cover;
 """
 
 img = Image.open('netflix-o.png')
+theme = {
+    "base": "dark",
+    "primaryColor": "#e50914",
+    "backgroundColor": "#040000",
+    "secondaryBackgroundColor": "#2f0909"
+}
 st.set_page_config(
     page_title='Recommendflix',
     page_icon=img,
