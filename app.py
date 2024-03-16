@@ -15,7 +15,6 @@ img = Image.open('netflix-o.png')
 st.set_page_config(
     page_title='Recommendflix',
     page_icon=img,
-    theme="dark",
     primaryColor="#e50914",
     backgroundColor="#040000",
     secondaryBackgroundColor="#2f0909"
