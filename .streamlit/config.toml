@@ -3,3 +3,4 @@ primaryColor='#e50914'
 backgroundColor='#040000'
 secondaryBackgroundColor='#2f0909'
 textColor = '#FFFFFF'
+font = "sans serif"
