@@ -18,7 +18,10 @@ similarity = pickle.load(open("similarity.pkl",'rb'))
 movies_list = movies['Title'].values
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-st.header("Netflix Movies Recommender System")
+
+st.markdown("<h1 style='color:red;'>NETFLIX</h1>", unsafe_allow_html=True)
+st.header("Movies Recommender System")
+
 select_movie = st.selectbox("Select movie", movies_list)
 
 def recommend(movie):
