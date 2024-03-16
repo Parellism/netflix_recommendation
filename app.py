@@ -7,6 +7,9 @@ page_bg_img = """
 background-image: url("https://www.dolby.com/siteassets/xf-site/blocks/hero/netflix-gradient.png");
 background-size: cover;
 }
+[data-testid="stAppViewContainer"] {
+background-color: rgba(0,0,0,0);
+}
 </style>
 """
 
