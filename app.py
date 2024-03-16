@@ -12,14 +12,14 @@ background-size: cover;
 """
 
 img = Image.open('netflix-o.png')
-st.set_page_config(page_title='Recommendflix',page_icon=img)
+st.set_page_config(page_title='RecommendFlix',page_icon=img)
 
 movies = pickle.load(open("movies_list.pkl",'rb'))
 similarity = pickle.load(open("similarity.pkl",'rb'))
 movies_list = movies['Title'].values
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-st.markdown("<h1 style='color:red;'>RECOMMENDFLIX</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color:red;'>RecommendFlix</h1>", unsafe_allow_html=True)
 #st.header("Movies Recommender System")
 #st.header("Netflix Movies Recommender System")
 select_movie = st.selectbox("Select movie", movies_list)
