@@ -25,20 +25,7 @@ movies_list = movies['Title'].values
 st.markdown(page_bg_img, unsafe_allow_html=True)
 st.header(":red[NETFLIX] Movies Recommender System")
 
-search_movie = st.text_input("Search")
-#st.selectbox("Select movie", sorted(movies_list))
-if search_movie:
-    matches = [movie for movie in movies_list if isinstance(movie, str) and search_movie.lower() in movie.lower()]
-else:
-    matches = []  # Jika tidak ada input, tampilkan semua film
-
-if matches:
-    select_movie = st.selectbox("Suggestions", options=matches)
-else:
-    select_movie = None
-
-# Menampilkan selectbox dengan saran
-select_movie = st.selectbox("Suggestions", options=matches)
+search_movie = st.selectbox("Select movie", sorted(movies_list))
 
 def recommend(movie):
     film_req = movies[movies['Title']==movie].index[0]
