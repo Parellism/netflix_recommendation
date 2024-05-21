@@ -33,9 +33,9 @@ else:
     matches = []  # Jika tidak ada input, tampilkan semua film
 
 if matches:
-    selected_movie = st.selectbox("Suggestions", options=matches)
+    select_movie = st.selectbox("Suggestions", options=matches)
 else:
-    selected_movie = None
+    select_movie = None
 
 # Menampilkan selectbox dengan saran
 select_movie = st.selectbox("Suggestions", options=matches)
