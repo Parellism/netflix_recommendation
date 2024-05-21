@@ -1,7 +1,6 @@
 import streamlit as st
 import pickle
 from PIL import Image
-from streamlit_autocomplete import st_autocomplete
 
 page_bg_img = """
 <style>
