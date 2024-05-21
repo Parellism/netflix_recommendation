@@ -30,7 +30,12 @@ search_movie = st.text_input("Search")
 if search_movie:
     matches = [movie for movie in movies_list if isinstance(movie, str) and search_movie.lower() in movie.lower()]
 else:
-    matches = movies_list  # Jika tidak ada input, tampilkan semua film
+    matches = []  # Jika tidak ada input, tampilkan semua film
+
+if matches:
+    selected_movie = st.selectbox("Suggestions", options=matches)
+else:
+    selected_movie = None
 
 # Menampilkan selectbox dengan saran
 select_movie = st.selectbox("Suggestions", options=matches)
