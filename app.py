@@ -28,9 +28,10 @@ st.header(":red[NETFLIX] Movies Recommender System")
 select_movie = st.text_input("Search")
 #st.selectbox("Select movie", sorted(movies_list))
 
-matches = [keyword for keyword in movies_list if input_text.lower() in keyword.lower()]
+
 
 if input_text:
+    matches = [keyword for keyword in movies_list if select_movie.lower() in keyword.lower()]
     st.write("Suggestions:")
     for match in matches:
         st.write(match)
