@@ -29,7 +29,7 @@ select_movie = st.text_input("Search")
 #st.selectbox("Select movie", sorted(movies_list))
 
 if select_movie:
-    matches = [keyword for keyword in movies_list if select_movie.lower() in keyword.lower()]
+    matches = [movie for movie in movies_list if isinstance(movie, str) and select_movie.lower() in movie.lower()]
     st.write("Suggestions:")
     for match in matches:
         st.write(match)
