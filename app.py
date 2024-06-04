@@ -43,16 +43,22 @@ def recommend(movie):
     return movie_recommendation
 
 if st.button("Show Recommendation"):
-    movie_name = recommend(select_movie)
-    col1,col2,col3,col4,col5 = st.columns(5)
-    with col1:
-        st.text(movie_name[0])
-    with col2:
-        st.text(movie_name[1])
-        st.image(poster_url[1])
-    with col3:
-        st.text(movie_name[2])
-    with col4:
-        st.text(movie_name[3])
-    with col5:
-        st.text(movie_name[4])
+    movie_names_urls = recommend(select_movie)[:5]  # Ambil lima rekomendasi pertama
+    col1, col2, col3, col4, col5 = st.columns(5)
+    for i, (movie_name, poster_url) in enumerate(movie_names_urls):
+        if i == 0:
+            with col1:
+                st.text(movie_name)
+        elif i == 1:
+            with col2:
+                st.text(movie_name)
+                st.image(poster_url)
+        elif i == 2:
+            with col3:
+                st.text(movie_name)
+        elif i == 3:
+            with col4:
+                st.text(movie_name)
+        elif i == 4:
+            with col5:
+                st.text(movie_name)
