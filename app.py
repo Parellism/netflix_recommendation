@@ -44,16 +44,16 @@ if st.button("Show Recommendation"):
     col1,col2,col3,col4,col5 = st.columns(5)
     with col1:
         st.text(movie_name[0])
-        st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
+        st.image(f"poster/{movie_name[0]}.jpg", width=250, use_column_width=False))
     with col2:
         st.text(movie_name[1])
-        st.image(f"poster/{movie_name[1]}.jpg", use_column_width=True)
+        st.image(f"poster/{movie_name[1]}.jpg", width=250, use_column_width=False))
     with col3:
         st.text(movie_name[2])
-        st.image(f"poster/{movie_name[2]}.jpg", use_column_width=True)
+        st.image(f"poster/{movie_name[2]}.jpg", width=250, use_column_width=False))
     with col4:
         st.text(movie_name[3])
-        st.image(f"poster/{movie_name[3]}.jpg", use_column_width=True)
+        st.image(f"poster/{movie_name[3]}.jpg", width=250, use_column_width=False))
     with col5:
         st.text(movie_name[4])
         st.image(f"poster/{movie_name[4]}.jpg", use_column_width=True)
