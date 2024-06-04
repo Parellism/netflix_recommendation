@@ -1,6 +1,6 @@
 import streamlit as st
 import pickle
-from PIL import Image
+from PIL import Image, ImageOps
 
 page_bg_img = """
 <style>
