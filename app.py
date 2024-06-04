@@ -46,7 +46,7 @@ if st.button("Show Recommendation"):
         st.text(movie_name[0])
     with col2:
         st.text(movie_name[1])
-        st.image(f"poster/{movies['Title']}.jpg", use_column_width=True)
+        st.image(f"poster/The App.jpg", use_column_width=True)
     with col3:
         st.text(movie_name[2])
     with col4:
