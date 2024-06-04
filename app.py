@@ -39,16 +39,27 @@ def recommend(movie):
             movie_recommendation.append(movies.iloc[film_index].Title)
     return movie_recommendation
 
+def resize_with_padding(image_path, desired_size=(300, 450)):
+    image = Image.open(image_path)
+    image = ImageOps.fit(image, desired_size, Image.ANTIALIAS, centering=(0.5, 0.5))
+    return image
+
 if st.button("Show Recommendation"):
     movie_name = recommend(select_movie)
     width = 100
     col1,col2,col3,col4,col5 = st.columns(5)
     with col1:
         st.text(movie_name[0])
-        st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
+        poster_path = f"poster/{movie_name[0]}.jpg"
+        poster = resize_with_padding(poster_path)
+        st.image(poster, use_column_width=True)
+        #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
     with col2:
         st.text(movie_name[1])
-        st.image(f"poster/{movie_name[1]}.jpg", use_column_width=True)
+        poster_path = f"poster/{movie_name[1]}.jpg"
+        poster = resize_with_padding(poster_path)
+        st.image(poster, use_column_width=True)
+        #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
     with col3:
         st.text(movie_name[2])
         st.image(f"poster/{movie_name[2]}.jpg", use_column_width=True)
