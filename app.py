@@ -62,10 +62,19 @@ if st.button("Show Recommendation"):
         #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
     with col3:
         st.text(movie_name[2])
-        st.image(f"poster/{movie_name[2]}.jpg", use_column_width=True)
+        poster_path = f"poster/{movie_name[2]}.jpg"
+        poster = resize_with_padding(poster_path)
+        st.image(poster, use_column_width=True)
+        #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
     with col4:
         st.text(movie_name[3])
-        st.image(f"poster/{movie_name[3]}.jpg", use_column_width=True)
+        poster_path = f"poster/{movie_name[3]}.jpg"
+        poster = resize_with_padding(poster_path)
+        st.image(poster, use_column_width=True)
+        #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
     with col5:
         st.text(movie_name[4])
-        st.image(f"poster/{movie_name[4]}.jpg", use_column_width=True)
+        poster_path = f"poster/{movie_name[4]}.jpg"
+        poster = resize_with_padding(poster_path)
+        st.image(poster, use_column_width=True)
+        #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
