@@ -41,7 +41,7 @@ def recommend(movie):
 
 def resize_with_padding(image_path, desired_size=(300, 450)):
     image = Image.open(image_path)
-    image = ImageOps.fit(image, desired_size, Image.ANTIALIAS, centering=(0.5, 0.5))
+    image = ImageOps.fit(image, desired_size, Image.LANCZOS, centering=(0.5, 0.5))
     return image
 
 if st.button("Show Recommendation"):
