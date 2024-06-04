@@ -49,6 +49,7 @@ if st.button("Show Recommendation"):
         if i == 0:
             with col1:
                 st.text(movie_name)
+                st.image(poster_url)
         elif i == 1:
             with col2:
                 st.text(movie_name)
@@ -56,9 +57,12 @@ if st.button("Show Recommendation"):
         elif i == 2:
             with col3:
                 st.text(movie_name)
+                st.image(poster_url)
         elif i == 3:
             with col4:
                 st.text(movie_name)
+                st.image(poster_url)
         elif i == 4:
             with col5:
                 st.text(movie_name)
+                st.image(poster_url)
