@@ -36,7 +36,10 @@ def recommend(movie):
         similarity_score = i[1]
         film_index = i[0]
         if similarity_score > 0:
-            movie_recommendation.append(movies.iloc[film_index].Title)
+            #movie_recommendation.append(movies.iloc[film_index].Title)
+            movie_title = movies.iloc[film_index].Title
+            poster_url = movies.iloc[film_index].Poster_URL
+            movie_recommendation.append((movie_title, poster_url))
     return movie_recommendation
 
 if st.button("Show Recommendation"):
@@ -46,6 +49,7 @@ if st.button("Show Recommendation"):
         st.text(movie_name[0])
     with col2:
         st.text(movie_name[1])
+        st.image(poster_url[1])
     with col3:
         st.text(movie_name[2])
     with col4:
