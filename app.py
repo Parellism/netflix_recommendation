@@ -50,31 +50,36 @@ if st.button("Show Recommendation"):
     col1,col2,col3,col4,col5 = st.columns(5)
     with col1:
         st.text(movie_name[0])
-        poster_path = f"poster/{movie_name[0]}.jpg"
+        sanitized_movie_name = movie_name[0].replace(":", "").replace("?", "")
+        poster_path = f"poster/{sanitized_movie_name}.jpg"
         poster = resize_with_padding(poster_path)
         st.image(poster, use_column_width=True)
         #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
     with col2:
         st.text(movie_name[1])
-        poster_path = f"poster/{movie_name[1]}.jpg"
+        sanitized_movie_name = movie_name[1].replace(":", "").replace("?", "")
+        poster_path = f"poster/{sanitized_movie_name}.jpg"
         poster = resize_with_padding(poster_path)
         st.image(poster, use_column_width=True)
         #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
     with col3:
         st.text(movie_name[2])
-        poster_path = f"poster/{movie_name[2]}.jpg"
+        sanitized_movie_name = movie_name[2].replace(":", "").replace("?", "")
+        poster_path = f"poster/{sanitized_movie_name}.jpg"
         poster = resize_with_padding(poster_path)
         st.image(poster, use_column_width=True)
         #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
     with col4:
         st.text(movie_name[3])
-        poster_path = f"poster/{movie_name[3]}.jpg"
+        sanitized_movie_name = movie_name[3].replace(":", "").replace("?", "")
+        poster_path = f"poster/{sanitized_movie_name}.jpg"
         poster = resize_with_padding(poster_path)
         st.image(poster, use_column_width=True)
         #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
     with col5:
         st.text(movie_name[4])
-        poster_path = f"poster/{movie_name[4]}.jpg"
+        sanitized_movie_name = movie_name[4].replace(":", "").replace("?", "")
+        poster_path = f"poster/{sanitized_movie_name}.jpg"
         poster = resize_with_padding(poster_path)
         st.image(poster, use_column_width=True)
         #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
