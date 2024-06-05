@@ -48,12 +48,12 @@ if st.button("Show Recommendation"):
     movie_name = recommend(select_movie)
     cols = st.columns(5)
     for i in range(min(len(movie_name), len(cols))):
-    with cols[i]:
-        st.text(movie_name[i])
-        sanitized_movie_name = movie_name[i].replace(":", "").replace("?", "")
-        poster_path = f"poster/{sanitized_movie_name}.jpg"
-        poster = resize_with_padding(poster_path)
-        st.image(poster, use_column_width=True)
+        with cols[i]:
+            st.text(movie_name[i])
+            sanitized_movie_name = movie_name[i].replace(":", "").replace("?", "")
+            poster_path = f"poster/{sanitized_movie_name}.jpg"
+            poster = resize_with_padding(poster_path)
+            st.image(poster, use_column_width=True)
 
 
     
