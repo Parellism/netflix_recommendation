@@ -46,40 +46,50 @@ def resize_with_padding(image_path, desired_size=(300, 450)):
 
 if st.button("Show Recommendation"):
     movie_name = recommend(select_movie)
-    width = 100
-    col1,col2,col3,col4,col5 = st.columns(5)
-    with col1:
-        st.text(movie_name[0])
-        sanitized_movie_name = movie_name[0].replace(":", "").replace("?", "")
+    cols = st.columns(5)
+    for i in range(min(len(movie_name), len(cols))):
+    with cols[i]:
+        st.text(movie_name[i])
+        sanitized_movie_name = movie_name[i].replace(":", "").replace("?", "")
         poster_path = f"poster/{sanitized_movie_name}.jpg"
         poster = resize_with_padding(poster_path)
         st.image(poster, use_column_width=True)
+
+
+    
+#    col1,col2,col3,col4,col5 = st.columns(5)
+#    with col1:
+#        st.text(movie_name[0])
+#        sanitized_movie_name = movie_name[0].replace(":", "").replace("?", "")
+#        poster_path = f"poster/{sanitized_movie_name}.jpg"
+#        poster = resize_with_padding(poster_path)
+#        st.image(poster, use_column_width=True)
         #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
-    with col2:
-        st.text(movie_name[1])
-        sanitized_movie_name = movie_name[1].replace(":", "").replace("?", "")
-        poster_path = f"poster/{sanitized_movie_name}.jpg"
-        poster = resize_with_padding(poster_path)
-        st.image(poster, use_column_width=True)
+#    with col2:
+#        st.text(movie_name[1])
+#        sanitized_movie_name = movie_name[1].replace(":", "").replace("?", "")
+#        poster_path = f"poster/{sanitized_movie_name}.jpg"
+#        poster = resize_with_padding(poster_path)
+#        st.image(poster, use_column_width=True)
+       #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
+#    with col3:
+#        st.text(movie_name[2])
+#        sanitized_movie_name = movie_name[2].replace(":", "").replace("?", "")
+#        poster_path = f"poster/{sanitized_movie_name}.jpg"
+#        poster = resize_with_padding(poster_path)
+#        st.image(poster, use_column_width=True)
+#        #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
+#    with col4:
+#        st.text(movie_name[3])
+#        sanitized_movie_name = movie_name[3].replace(":", "").replace("?", "")
+#        poster_path = f"poster/{sanitized_movie_name}.jpg"
+#        poster = resize_with_padding(poster_path)
+#        st.image(poster, use_column_width=True)
         #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
-    with col3:
-        st.text(movie_name[2])
-        sanitized_movie_name = movie_name[2].replace(":", "").replace("?", "")
-        poster_path = f"poster/{sanitized_movie_name}.jpg"
-        poster = resize_with_padding(poster_path)
-        st.image(poster, use_column_width=True)
-        #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
-    with col4:
-        st.text(movie_name[3])
-        sanitized_movie_name = movie_name[3].replace(":", "").replace("?", "")
-        poster_path = f"poster/{sanitized_movie_name}.jpg"
-        poster = resize_with_padding(poster_path)
-        st.image(poster, use_column_width=True)
-        #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
-    with col5:
-        st.text(movie_name[4])
-        sanitized_movie_name = movie_name[4].replace(":", "").replace("?", "")
-        poster_path = f"poster/{sanitized_movie_name}.jpg"
-        poster = resize_with_padding(poster_path)
-        st.image(poster, use_column_width=True)
+#    with col5:
+#        st.text(movie_name[4])
+#        sanitized_movie_name = movie_name[4].replace(":", "").replace("?", "")
+#        poster_path = f"poster/{sanitized_movie_name}.jpg"
+#        poster = resize_with_padding(poster_path)
+#        st.image(poster, use_column_width=True)
         #st.image(f"poster/{movie_name[0]}.jpg", use_column_width=True)
