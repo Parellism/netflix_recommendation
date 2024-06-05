@@ -1,11 +1,11 @@
 import streamlit as st
 import pickle
 from PIL import Image, ImageOps
-#https://www.dolby.com/siteassets/xf-site/blocks/hero/netflix-gradient.png
+#
 page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"] {
-background-image: url("https://img.freepik.com/free-photo/grunge-black-concrete-textured-background_53876-124541.jpg");
+background-image: url("https://www.dolby.com/siteassets/xf-site/blocks/hero/netflix-gradient.png");
 background-size: cover;
 }
 </style>
